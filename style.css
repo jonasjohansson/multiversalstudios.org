@@ -1,1 +1,46 @@
-style.css
+:root {
+  --bg: #f7f7f7;
+  --text: #181818;
+  --muted: #666;
+  --accent: #0a0a0a;
+  --maxw: 1000px;
+  --pad: clamp(16px, 2.5vw, 28px);
+  --gap: clamp(18px, 2.2vw, 28px);
+  --radius: 18px;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  letter-spacing: 0.2px;
+}
+a {
+  color: inherit;
+}
+
+body > * {
+  padding: 1rem;
+}
+
+article:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.project-inner > *:not(:last-child),
+p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.subtitle,
+.meta {
+  font-style: italic;
+}
