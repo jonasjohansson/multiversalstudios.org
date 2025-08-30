@@ -1,22 +1,23 @@
 :root {
   --bg: #f7f7f7;
   --text: #181818;
-  --muted: #666;
-  --accent: #0a0a0a;
-  --maxw: 1000px;
-  --pad: clamp(16px, 2.5vw, 28px);
-  --gap: clamp(18px, 2.2vw, 28px);
-  --radius: 18px;
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.06);
 }
-* {
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  margin: 0;
 }
+
 html,
 body {
   height: 100%;
 }
+
+* {
+  margin: 0;
+}
+
 body {
   background: var(--bg);
   color: var(--text);
@@ -24,30 +25,28 @@ body {
   letter-spacing: 0.2px;
 }
 
-@media (min-width: 820px) {
-  .hero {
-    max-width: 50vw;
-  }
-  #projects {
-    column-count: 2;
-  }
+h1 {
+  margin-bottom: 1rem;
 }
+
 a {
   color: inherit;
+  text-decoration: none;
+  transition: color 150ms ease, background-color 150ms ease;
 }
 
 a:hover {
   color: greenyellow;
-  background-color: black;
+  background-color: #000;
 }
 
 figure {
   line-height: 0;
 }
-
 figure:not(:last-child) {
   margin-bottom: 0.5rem;
 }
+
 body > * {
   padding: 1rem;
 }
@@ -64,4 +63,19 @@ p:not(:last-child) {
 .subtitle,
 .meta {
   font-style: italic;
+}
+
+@media (min-width: 820px) {
+  .hero {
+    max-width: 50vw;
+  }
+  #projects {
+    column-count: 2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
 }
