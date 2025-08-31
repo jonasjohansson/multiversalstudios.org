@@ -55,10 +55,6 @@ blockquote {
   padding-left: 2rem;
 }
 
-figure:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
 body > * {
   padding: 1rem;
 }
@@ -68,7 +64,9 @@ article:not(:last-child) {
 }
 
 .project-inner > *:not(:last-child),
-p:not(:last-child) {
+blockquote:not(:last-child),
+p:not(:last-child),
+figure:not(:last-child) {
   margin-bottom: 1rem;
 }
 
