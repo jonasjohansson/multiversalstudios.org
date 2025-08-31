@@ -35,15 +35,11 @@ h2 {
 }
 
 a {
-  color: inherit;
+  color: limegreen;
 }
 
 img {
   width: 100%;
-}
-
-a:hover {
-  color: blue;
 }
 
 figure {
