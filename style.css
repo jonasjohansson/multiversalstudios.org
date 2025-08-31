@@ -83,5 +83,5 @@ figure:not(:last-child) {
 
 ::selection {
   background: limegreen;
-  color: #fff; /* text turns white on green */
+  color: #fff;
 }
