@@ -25,8 +25,13 @@ body {
   letter-spacing: 0.2px;
 }
 
-h1 {
+h1,
+h2 {
   margin-bottom: 1rem;
+}
+
+h2 {
+  line-height: 1.1;
 }
 
 a {
@@ -50,6 +55,7 @@ figure {
 
 blockquote {
   font-style: italic;
+  padding-left: 2rem;
 }
 
 figure:not(:last-child) {
@@ -87,4 +93,19 @@ p:not(:last-child) {
   * {
     transition: none !important;
   }
+}
+
+main > article {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* when hovering anywhere inside <main>, dim all articles */
+main:hover > article {
+  opacity: 0.5;
+}
+
+/* keep the hovered one fully visible */
+main > article:hover {
+  opacity: 1;
 }
