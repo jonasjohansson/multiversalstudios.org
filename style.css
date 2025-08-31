@@ -36,8 +36,6 @@ h2 {
 
 a {
   color: inherit;
-  text-decoration: none;
-  transition: color 150ms ease, background-color 150ms ease;
 }
 
 img {
@@ -45,8 +43,7 @@ img {
 }
 
 a:hover {
-  color: greenyellow;
-  background-color: #000;
+  color: blue;
 }
 
 figure {
@@ -93,19 +90,4 @@ p:not(:last-child) {
   * {
     transition: none !important;
   }
-}
-
-main > article {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-/* when hovering anywhere inside <main>, dim all articles */
-main:hover > article {
-  opacity: 0.5;
-}
-
-/* keep the hovered one fully visible */
-main > article:hover {
-  opacity: 1;
 }
