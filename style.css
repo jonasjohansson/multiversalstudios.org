@@ -80,3 +80,8 @@ figure:not(:last-child) {
     column-gap: 0.5rem;
   }
 }
+
+::selection {
+  background: limegreen;
+  color: #fff; /* text turns white on green */
+}
