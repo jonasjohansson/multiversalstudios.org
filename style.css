@@ -67,7 +67,7 @@ article:not(:last-child) {
 blockquote:not(:last-child),
 p:not(:last-child),
 figure:not(:last-child) {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .subtitle,
@@ -81,11 +81,6 @@ figure:not(:last-child) {
   }
   main {
     column-count: 2;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
+    column-gap: 0.5rem;
   }
 }
