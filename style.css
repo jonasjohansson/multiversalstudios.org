@@ -32,6 +32,7 @@ h2 {
 
 h2 {
   line-height: 1.1;
+  text-transform: uppercase;
 }
 
 a {
@@ -71,7 +72,7 @@ figure:not(:last-child) {
   font-style: italic;
 }
 
-@media (min-width: 820px) {
+@media (min-width: 960px) {
   header {
     max-width: 50vw;
   }
@@ -79,8 +80,15 @@ figure:not(:last-child) {
     column-count: 2;
     column-gap: 0.5rem;
   }
-}
 
+  /* keep each project intact in a single column */
+  main > article {
+    break-inside: avoid;
+    break-inside: avoid-column; /* newer syntax */
+    -webkit-column-break-inside: avoid; /* Safari/old Chrome */
+    page-break-inside: avoid; /* print fallback */
+  }
+}
 ::selection {
   background: limegreen;
   color: #fff;
