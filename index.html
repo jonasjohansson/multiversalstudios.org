@@ -320,5 +320,20 @@
         </figure>
       </article>
     </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const main = document.querySelector("main");
+        const articles = Array.from(main.querySelectorAll("article"));
+
+        // Fisher–Yates shuffle
+        for (let i = articles.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [articles[i], articles[j]] = [articles[j], articles[i]];
+        }
+
+        // Append shuffled articles back to <main>
+        articles.forEach((article) => main.appendChild(article));
+      });
+    </script>
   </body>
 </html>
