@@ -58,6 +58,8 @@ body > * {
 
 article:not(:last-child) {
   margin-bottom: 2rem;
+  border-bottom: 1px solid black;
+  padding-bottom: 2rem;
 }
 
 .project-inner > *:not(:last-child),
